@@ -1,0 +1,50 @@
+{
+  "name": "@martinkumhera/winccoa-sdm-page",
+  "version": "0.2.0",
+  "author": {
+    "name": "Martin Kumhera",
+    "email": "martin.kumhera@etm.at"
+  },
+  "license": "MIT",
+  "description": "Semantic Data Model (SDM) page for WinCC OA WebUI — manage classes, instances, typed relations, ISA-95 asset hierarchy (lazy tree), graph canvas, templates, Excel/CSV round-trip, model validation, and WinCC OA project migration.",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "sync:dist": "node scripts/sync-dist.mjs",
+    "postinstall": "node scripts/wui-page-manage.mjs",
+    "manifest": "node scripts/wui-page-manage.mjs"
+  },
+  "exports": {
+    "./pages/sdm.js": "./dist/pages/sdm.js"
+  },
+  "files": [
+    "dist/",
+    "pages/",
+    "lib/",
+    "scripts/",
+    "oa-data/",
+    "wui-page.json"
+  ],
+  "keywords": [
+    "winccoa",
+    "webui",
+    "semantic-data-model",
+    "sdm",
+    "asset-management",
+    "wui-page"
+  ],
+  "peerDependencies": {
+    "@etm-professional-control/oa-rx-js-api": "^8.2.0",
+    "@siemens/ix": "~4.0.0",
+    "@siemens/ix-icons": "~3.4.0",
+    "@wincc-oa/wui-ix-wrappers": "^1.0.0",
+    "@wincc-oa/wui-oarxjs-context": "^1.0.0",
+    "@wincc-oa/wui-oarxjs-data": "^1.0.0",
+    "@wincc-oa/wui-shared": "^1.0.0",
+    "lit": "^3.0.0",
+    "rxjs": "^7.0.0",
+    "tsyringe": "^4.0.0"
+  }
+}

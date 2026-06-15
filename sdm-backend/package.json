@@ -1,0 +1,42 @@
+{
+  "name": "@martinkumhera/winccoa-sdm-backend",
+  "version": "0.2.1",
+  "author": {
+    "name": "Martin Kumhera",
+    "email": "martin.kumhera@etm.at"
+  },
+  "license": "MIT",
+  "description": "Semantic Data Model (SDM) backend for WinCC OA 3.21 — a webserver.js dashboard-server customization that exposes the sdm.* WebSocket command family (classes with type-in-type inheritance, instances, typed relations, ISA-95 asset hierarchy, CNS views, templates, Excel/CSV bulk import, model validation, WinCC OA project migration). Pure OA primitives (DPT/DP/CNS), redundancy-aware, scales to millions of DPEs.",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "sync:dist": "node scripts/sync-dist.mjs",
+    "postinstall": "node scripts/install-notes.mjs"
+  },
+  "files": [
+    "dist/",
+    "src/",
+    "run.js",
+    "tsconfig.json",
+    "scripts/install-notes.mjs"
+  ],
+  "keywords": [
+    "winccoa",
+    "webserver-js",
+    "semantic-data-model",
+    "sdm",
+    "webui-backend",
+    "javascript-manager"
+  ],
+  "peerDependencies": {
+    "webserver-js": "*",
+    "winccoa-manager": "*"
+  },
+  "peerDependenciesMeta": {
+    "webserver-js": { "optional": true },
+    "winccoa-manager": { "optional": true }
+  }
+}
